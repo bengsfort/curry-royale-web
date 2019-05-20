@@ -6,6 +6,29 @@
       "no-console": {
         "severity": "warning",
         "options": ["debug", "log", "time", "timeEnd", "trace"]
+      },
+      "ordered-imports": {
+        "severity": "off"
+      },
+      "variable-name": {
+        "severity": "warn",
+        "options": ["allow-leading-underscore"]
+      },
+      "trailing-comma": false,
+      "member-access": false,
+      "member-ordering": {
+        "severity": "warn",
+        "options": {
+          "order": [
+            "instance-field",
+            "static-field",
+            "constructor",
+            "static-method",
+            "private-instance-method",
+            "protected-instance-method",
+            "public-instance-method"
+          ]
+        }
       }
     },
     "rulesDirectory": []
