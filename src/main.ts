@@ -1,5 +1,6 @@
 import { WebGLRenderer } from "three";
 import { RenderedScene, PocScene } from "scenes";
+import { globalTime } from "utils/time";
 
 let renderer: WebGLRenderer;
 let activeScene: RenderedScene;
@@ -23,6 +24,7 @@ function setupScene() {
 function gameLoop() {
   // Request a new frame after we finish
   window.requestAnimationFrame(gameLoop);
+  globalTime.tick();
   activeScene.doRender(renderer);
 }
 
