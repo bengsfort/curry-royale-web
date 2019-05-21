@@ -10,6 +10,11 @@ import {
 export class PocScene extends RenderedScene {
   private _cube!: Mesh;
 
+  constructor() {
+    super();
+    window.__SCENE__ = this;
+  }
+
   setupScene(): Scene {
     const scene = new Scene();
 
