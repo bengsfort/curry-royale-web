@@ -1141,6 +1141,11 @@ micromatch@^3.1.10, micromatch@^3.1.8:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+mime@^2.2.2:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.4.3.tgz#229687331e86f68924e6cb59e1cdd937f18275fe"
+  integrity sha512-QgrPRJfE+riq5TPZMcHZOtm8c6K/yYrMbKIoRfapfiGLxS8OTeIfRhUGW5LU7MlRa52KOAGCfUNruqLrIBvWZw==
+
 mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
@@ -1504,6 +1509,14 @@ rollup-plugin-generate-html-template@^1.2.0:
   dependencies:
     fs-extra "^7.0.1"
 
+rollup-plugin-gltf@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-gltf/-/rollup-plugin-gltf-2.0.0.tgz#6ad907c3ba2809e9dc337b7cbbb97dc16d7fbe76"
+  integrity sha512-kZUxTlBfXg1hJTIFRaU84tlPeFx16Msw3Y3xsNb8smHlRioPvbn0XP20/jf1wmeC624fBvWZ3Eagn6nPtN/aiw==
+  dependencies:
+    mime "^2.2.2"
+    rollup-pluginutils "^2.7.1"
+
 rollup-plugin-node-resolve@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.0.0.tgz#754abf4841ed4bab2241551cba0a11d04c57f290"
@@ -1523,7 +1536,7 @@ rollup-plugin-typescript@^1.0.1:
     resolve "^1.10.0"
     rollup-pluginutils "^2.5.0"
 
-rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.7.0:
+rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.7.0, rollup-pluginutils@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.7.1.tgz#a7915ce8b12c177364784bf38a1590cc6c2c8250"
   integrity sha512-3nRf3buQGR9qz/IsSzhZAJyoK663kzseps8itkYHr+Z7ESuaffEPfgRinxbCRA0pf0gzLqkNKkSb8aNVTq75NA==
