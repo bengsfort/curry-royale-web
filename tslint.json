@@ -16,6 +16,8 @@
       },
       "trailing-comma": false,
       "member-access": false,
+      "no-bitwise": false,
+      "arrow-parens": false,
       "member-ordering": {
         "severity": "warn",
         "options": {

@@ -1,11 +1,12 @@
 import { WebGLRenderer } from "three";
-import { RenderedScene, PocScene } from "scenes";
 import { globalTime } from "utils/time";
+import { SceneRuntime } from "scene-runtime";
+import { POC_GAMEPLAY_SCENE } from "scenes/poc-gameplay-scene";
 
 let renderer: WebGLRenderer;
-let activeScene: RenderedScene;
+let runtime: SceneRuntime;
 
-function setupRenderer() {
+function setupRenderer(): WebGLRenderer {
   if (!renderer) {
     renderer = new WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -14,18 +15,19 @@ function setupRenderer() {
   return renderer;
 }
 
-function setupScene() {
-  if (!activeScene) {
-    activeScene = new PocScene();
+function setupScene(): SceneRuntime {
+  if (!runtime) {
+    runtime = new SceneRuntime(POC_GAMEPLAY_SCENE);
+    runtime.create();
   }
-  return activeScene;
+  return runtime;
 }
 
-function gameLoop() {
+function gameLoop(): void {
   // Request a new frame after we finish
   window.requestAnimationFrame(gameLoop);
   globalTime.tick();
-  activeScene.doRender(renderer);
+  runtime.tick(renderer);
 }
 
 function main() {
