@@ -1,3 +1,1 @@
-export * from "./scene-definition";
-export * from "./rendered-scene";
-export * from "./poc";
+export * from "./poc-gameplay-scene";
